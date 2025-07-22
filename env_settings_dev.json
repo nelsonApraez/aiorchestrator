@@ -1,0 +1,111 @@
+[
+  {
+    "name": "AISEARCH_ENDPOINT",
+    "value": "https://example-search.search.windows.net",
+    "slotSetting": false
+  },
+  {
+    "name": "AISEARCH_INDEX",
+    "value": "vector-index",
+    "slotSetting": false
+  },
+  {
+    "name": "AISEARCH_KEY_NAME",
+    "value": "example-aisearch-primary-key",
+    "slotSetting": false
+  },
+  {
+    "name": "AZURE_STORAGE_CONTAINER",
+    "value": "container-docs",
+    "slotSetting": false
+  },
+  {
+    "name": "AZURE_STORAGE_DOWNFOLDER",
+    "value": "processed-docs",
+    "slotSetting": false
+  },
+  {
+    "name": "AZURE_STORAGE_EXPIREMINUTES",
+    "value": "5",
+    "slotSetting": false
+  },
+  {
+    "name": "AZURE_STORAGE_UPFOLDER",
+    "value": "unprocessed-docs",
+    "slotSetting": false
+  },
+  {
+    "name": "COSMOS_AMOUNT_HISTORICAL_CHAT_RECOVER",
+    "value": "10",
+    "slotSetting": false
+  },
+  {
+    "name": "COSMOS_CONTAINER",
+    "value": "ConversationContainer",
+    "slotSetting": false
+  },
+  {
+    "name": "COSMOS_DATABASE",
+    "value": "ConversationsDB",
+    "slotSetting": false
+  },
+  {
+    "name": "COSMOS_ENDPOINT",
+    "value": "https://example-cosmos.documents.azure.com:443/",
+    "slotSetting": false
+  },
+  {
+    "name": "COSMOS_KEY_NAME",
+    "value": "example-cosmos-primary-key",
+    "slotSetting": false
+  },
+  {
+    "name": "KEYVAULT_URI",
+    "value": "https://example-keyvault.vault.azure.net/",
+    "slotSetting": false
+  },
+  {
+    "name": "OPENAI_EMBEDDING_MODEL",
+    "value": "text-embedding-ada-002-orch",
+    "slotSetting": false
+  },
+  {
+    "name": "OPENAI_ENDPOINT",
+    "value": "https://example-openai.openai.azure.com/",
+    "slotSetting": false
+  },
+  {
+    "name": "OPENAI_KEY_NAME",
+    "value": "example-openai-primary-key",
+    "slotSetting": false
+  },
+  {
+    "name": "OPENAI_MAX_TOKENS",
+    "value": "2048",
+    "slotSetting": false
+  },
+  {
+    "name": "OPENAI_MODEL",
+    "value": "gpt-4o-orch",
+    "slotSetting": false
+  },
+  {
+    "name": "PROMT_FINAL_TEMPLATE_SYSTEM",
+    "value": "You are a system assistant who helps the company employees with their questions. Be brief in your answers",
+    "slotSetting": false
+  },
+  {
+    "name": "PROMT_FINAL_TEMPLATE_USER",
+
+    "value": "## Question ##\n{0}\n## End ##\n\n## Chat history ##\n{1}\n## End ##\n\n## Source ##\n{2}\n## End ##\n\nYou can only use the resources that are in this message. Your answer needs to be **only** a valid JSON object in the following format, without any extra characters, text, or formatting around it:\n{\n    \"answer\": // the answer to the question. You should take into account the ## Question ##, the ## Chat history ##, and the ## Source ## provided in this message. Add a source reference to the end of each sentence, e.g., 'Apple is a fruit [reference1.pdf][reference2.pdf]' You should not return two identical source references and ignore .json references. If no source is available, respond with 'I don't know.'.\n    \"thoughts\": // brief explanation of how the answer was generated.\n}",
+
+    "slotSetting": false
+  },
+  {
+    "name": "PROMT_INITIAL_TEMPLATE_SYSTEM",
+
+    "value": "You are a helpful AI assistant, generate search query for followup question. Make your response simple and precise. Return the query only, do not return any other text. e.g. Northwind Health Plus AND standard plan. standard plan AND dental AND employee benefit.",
+    "slotSetting": false
+  }
+]
+

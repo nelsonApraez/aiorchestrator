@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "cms_genai_rag_aiorchestrator": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7284",
+      "launchBrowser": false
+    }
+  }
+}

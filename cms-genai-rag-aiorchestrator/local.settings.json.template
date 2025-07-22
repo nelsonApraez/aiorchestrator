@@ -1,0 +1,52 @@
+{
+  "KeyVault": {
+    "VaultUri": "https://your-keyvault.vault.azure.net/"
+  },
+  "AzureAISearch": {
+    "KeyName": "your-aisearch-key-name",
+    "EndPoint": "https://your-search.search.windows.net",
+    "Index": "vector-index",
+    "Key1": "YOUR_SEARCH_KEY_HERE"
+  },
+  "OpenIA": {
+    "KeyName": "your-openai-key-name",
+    "Key1": "YOUR_OPENAI_KEY_HERE",
+    "EndPoint": "https://your-openai.openai.azure.com/",
+    "Model": "gpt-4o",
+    "maxTokens": 2048,
+    "ModelEmbedding": "text-embedding-ada-002"
+  },
+  "CosmosDb": {
+    "KeyName": "your-cosmos-key-name",
+    "Endpoint": "https://your-cosmos.documents.azure.com:443/",
+    "DatabaseName": "ConversationsDB",
+    "ContainerName": "ConversationContainer",
+    "AmountHistoricalChatToRecover": "10",
+    "Key1": "YOUR_COSMOS_KEY_HERE"
+  },
+  "Prompt": {
+    "InitialTemplateSystem": "You are a helpful AI assistant, generate search query for followup question. Make your respond simple and precise. Return the query only, do not return any other text.",
+    "FinalTemplateSystem": "You are a system assistant who helps the company employees with their questions.",
+    "FinalTemplateUser": "## Question ##\n{0}\n## End ##\n\n## Chat history ##\n{1}\n## End ##\n\n## Source ##\n{2}\n## End ##\n\nYou can only use the resources that are in this message. Your answer needs to be **only** a valid JSON object in the following format, without any extra characters, text, or formatting around it:\n{{\n    \"answer\": // the answer to the question. Add a source reference to the end of each sentence if available. If no source is available, respond with 'I don't know.'.\n    \"thoughts\": // brief explanation of how the answer was generated.\n}}"
+  },
+  "AzureStorage": {
+    "ConnectionString": "YOUR_STORAGE_CONNECTION_STRING_HERE",
+    "KeyName": "your-storage-key-name",
+    "Container": "container-docs",
+    "FolderToUpLoad": "unprocessed-docs",
+    "FolderToDownLoad": "processed-docs",
+    "ExpiryMinutes": 5
+  },
+  "Security": {
+    "KeyName": "your-auth-token-key-name",
+    "Token": "YOUR_JWT_TOKEN_HERE"
+  },
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}
